@@ -1,9 +1,12 @@
+Here's the fully translated version of your HTML document to English:
+
+```html
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Математический тренажер</title>
+    <title>Math Trainer</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -154,7 +157,7 @@
             font-weight: bold;
             transform: scale(1.05);
         }
-        /* Стили для модального окна */
+        /* Modal window styles */
         .modal {
             display: none;
             position: fixed;
@@ -186,7 +189,7 @@
         .close:hover {
             color: black;
         }
-        /* Стили для вкладок */
+        /* Tab styles */
         .theory-tabs {
             display: flex;
             margin-bottom: 20px;
@@ -281,13 +284,13 @@
   color: #27ae60;
   animation: celebrate 0.5s ease;
 }
-/* Эффект при наведении на карточки ученых */
+/* Hover effect on scientist cards */
 .theorem-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
-/* Стили для таймера */
+/* Timer styles */
 .timer-container {
     display: flex;
     justify-content: center;
@@ -302,7 +305,7 @@
     border-radius: 30px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
-/* Стили для уровней сложности */
+/* Difficulty level styles */
 .difficulty-buttons {
     display: flex;
     justify-content: center;
@@ -331,7 +334,7 @@
     background-color: #e74c3c;
     color: white;
 }
-/* Стили для статистики */
+/* Stats styles */
 #stats-btn {
     background-color: #9b59b6;
 }
@@ -383,7 +386,7 @@
 #file-input {
     display: none;
 }
-/* Добавленные стили */
+/* Added styles */
 #achievements-btn {
     background-color: #f1c40f;
     color: #2c3e50;
@@ -464,7 +467,7 @@
     background-color: #c8e6c9;
     color: #2e7d32;
 }
-/* Стили для окна согласия */
+/* Consent window styles */
 #consent-modal {
     display: flex;
     justify-content: center;
@@ -519,7 +522,7 @@
     </style>
 </head>
 <body>
-    <!-- Плавающие геометрические фигуры -->
+    <!-- Floating geometric shapes -->
     <div class="shape circle" style="top:10%; left:5%; animation-delay:0s;"></div>
     <div class="shape triangle" style="top:70%; left:10%; animation-delay:2s;"></div>
     <div class="shape square" style="top:20%; left:80%; animation-delay:4s;"></div>
@@ -527,237 +530,237 @@
     <div class="shape triangle" style="top:30%; left:15%; animation-delay:8s;"></div>
     <div class="shape square" style="top:60%; left:75%; animation-delay:10s;"></div>
     
-    <!-- Модальное окно согласия -->
+    <!-- Consent modal window -->
     <div id="consent-modal" class="modal" style="display: flex;">
         <div class="modal-content">
-            <h2>Добро пожаловать в Математический тренажер!</h2>
-            <p>Мы хотим уведомить вас, что все достижения, статистика решений примеров будут сохраняться в вашем браузере.</p>
-            <p>Это позволит вам отслеживать свой прогресс и возвращаться к тренировкам без потери данных.</p>
+            <h2>Welcome to Math Trainer!</h2>
+            <p>We want to notify you that all achievements, problem-solving statistics will be saved in your browser.</p>
+            <p>This will allow you to track your progress and return to training without losing data.</p>
             <div class="consent-buttons">
-                <button id="agree-btn" class="consent-btn">Да, я согласен</button>
-                <button id="disagree-btn" class="consent-btn">Нет, спасибо</button>
+                <button id="agree-btn" class="consent-btn">Yes, I agree</button>
+                <button id="disagree-btn" class="consent-btn">No, thanks</button>
             </div>
         </div>
     </div>
     
     <div class="container" id="main-container" style="display: none;">
-        <h1>Математический тренажер</h1>
+        <h1>Math Trainer</h1>
         <div id="no-save-warning" class="no-save-message" style="display: none;">
-            Результаты не будут сохраняться
+            Results will not be saved
         </div>
-        <!-- Уровни сложности -->
+        <!-- Difficulty levels -->
         <div class="difficulty-buttons">
-            <button class="difficulty-btn difficulty-easy active" data-difficulty="easy">Легкий</button>
-            <button class="difficulty-btn difficulty-medium" data-difficulty="medium">Средний</button>
-            <button class="difficulty-btn difficulty-hard" data-difficulty="hard">Сложный</button>
+            <button class="difficulty-btn difficulty-easy active" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn difficulty-medium" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn difficulty-hard" data-difficulty="hard">Hard</button>
         </div>
-        <!-- Таймер -->
+        <!-- Timer -->
         <div class="timer-container">
-            <div class="timer">Время: <span id="time">30</span> сек</div>
+            <div class="timer">Time: <span id="time">30</span> sec</div>
         </div>
         <div class="operation-buttons">
-            <button class="operation-btn active" data-operation="+">Сложение</button>
-            <button class="operation-btn" data-operation="-">Вычитание</button>
-            <button class="operation-btn" data-operation="*">Умножение</button>
-            <button class="operation-btn" data-operation="/">Деление</button>
-            <button id="theory-btn">Теория</button>
-            <button id="theorems-btn">Теоремы</button>
-            <button id="stats-btn">Статистика</button>
-            <button id="achievements-btn">Достижения</button>
-            <button id="progression-btn">Прохождение</button>
+            <button class="operation-btn active" data-operation="+">Addition</button>
+            <button class="operation-btn" data-operation="-">Subtraction</button>
+            <button class="operation-btn" data-operation="*">Multiplication</button>
+            <button class="operation-btn" data-operation="/">Division</button>
+            <button id="theory-btn">Theory</button>
+            <button id="theorems-btn">Theorems</button>
+            <button id="stats-btn">Statistics</button>
+            <button id="achievements-btn">Achievements</button>
+            <button id="progression-btn">Progression</button>
         </div>
         <div class="problem" id="problem">2 + 3 = ?</div>
         <div>
-            <input type="number" id="answer" placeholder="Ответ">
+            <input type="number" id="answer" placeholder="Answer">
             <div>
-                <button id="check">Проверить</button>
-                <button id="next">Следующий</button>
+                <button id="check">Check</button>
+                <button id="next">Next</button>
             </div>
         </div>
         <div class="result" id="result"></div>
         <div class="stats">
             <div class="stat-box">
-                Правильно: <span id="correct">0</span>
+                Correct: <span id="correct">0</span>
             </div>
             <div class="stat-box">
-                Неправильно: <span id="incorrect">0</span>
+                Incorrect: <span id="incorrect">0</span>
             </div>
             <div class="stat-box">
-                Всего: <span id="total">0</span>
+                Total: <span id="total">0</span>
             </div>
         </div>
     </div>
     
-    <!-- Модальное окно теории -->
+    <!-- Theory modal window -->
     <div id="theory-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>Теория математики</h2>
+            <h2>Math Theory</h2>
             <div class="theory-tabs">
-                <button class="tab-btn active" data-tab="school">Школа (1-9 класс)</button>
-                <button class="tab-btn" data-tab="college">Колледж</button>
-                <button class="tab-btn" data-tab="university">Университет</button>
+                <button class="tab-btn active" data-tab="school">School (Grades 1-9)</button>
+                <button class="tab-btn" data-tab="college">College</button>
+                <button class="tab-btn" data-tab="university">University</button>
             </div>
             <div class="tab-content active" id="school-tab">
-                <h3>Основы математики (1-9 класс)</h3>
+                <h3>Math Basics (Grades 1-9)</h3>
                 <div class="theory-section">
-                    <h4>1-4 класс</h4>
+                    <h4>Grades 1-4</h4>
                     <ul>
-                        <li>Сложение и вычитание</li>
-                        <li>Умножение и деление</li>
-                        <li>Дроби</li>
-                        <li>Геометрические фигуры</li>
+                        <li>Addition and subtraction</li>
+                        <li>Multiplication and division</li>
+                        <li>Fractions</li>
+                        <li>Geometric shapes</li>
                     </ul>
                 </div>
                 <div class="theory-section">
-                    <h4>5-9 класс</h4>
+                    <h4>Grades 5-9</h4>
                     <ul>
-                        <li>Обыкновенные и десятичные дроби</li>
-                        <li>Проценты</li>
-                        <li>Алгебраические выражения</li>
-                        <li>Уравнения</li>
-                        <li>Геометрия: площади, объемы</li>
+                        <li>Common and decimal fractions</li>
+                        <li>Percentages</li>
+                        <li>Algebraic expressions</li>
+                        <li>Equations</li>
+                        <li>Geometry: areas, volumes</li>
                     </ul>
                 </div>
             </div>
             <div class="tab-content" id="college-tab">
-                <h3>Математика для колледжа</h3>
+                <h3>College Math</h3>
                 <div class="theory-section">
                     <ul>
-                        <li>Основы алгебры</li>
-                        <li>Тригонометрия</li>
-                        <li>Логарифмы</li>
-                        <li>Основы математического анализа</li>
-                        <li>Прикладная математика</li>
+                        <li>Algebra basics</li>
+                        <li>Trigonometry</li>
+                        <li>Logarithms</li>
+                        <li>Calculus basics</li>
+                        <li>Applied mathematics</li>
                     </ul>
                 </div>
             </div>
             <div class="tab-content" id="university-tab">
-                <h3>Высшая математика</h3>
+                <h3>Higher Mathematics</h3>
                 <div class="theory-section">
                     <ul>
-                        <li>Математический анализ</li>
-                        <li>Линейная алгебра</li>
-                        <li>Дифференциальные уравнения</li>
-                        <li>Теория вероятностей</li>
-                        <li>Дискретная математика</li>
+                        <li>Mathematical analysis</li>
+                        <li>Linear algebra</li>
+                        <li>Differential equations</li>
+                        <li>Probability theory</li>
+                        <li>Discrete mathematics</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Модальное окно теорем -->
+    <!-- Theorems modal window -->
     <div id="theorems-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('theorems-modal').style.display='none'">&times;</span>
-            <h2>Великие теоремы и ученые</h2>
+            <h2>Great Theorems and Scientists</h2>
             <div class="theorem-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Pythagoras.jpg/220px-Pythagoras.jpg" alt="Пифагор" class="theorem-portrait">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Pythagoras.jpg/220px-Pythagoras.jpg" alt="Pythagoras" class="theorem-portrait">
                 <div class="theorem-content">
-                    <div class="theorem-name">Пифагор Самосский</div>
-                    <div class="theorem-dates">ок. 570 - ок. 495 до н.э.</div>
+                    <div class="theorem-name">Pythagoras of Samos</div>
+                    <div class="theorem-dates">c. 570 - c. 495 BC</div>
                     <div class="theorem-text">
-                        <strong>Теорема Пифагора:</strong> В прямоугольном треугольнике квадрат гипотенузы равен сумме квадратов катетов.
-                        c² = a² + b². Эта теорема лежит в основе евклидовой геометрии и имеет множество приложений.
+                        <strong>Pythagorean Theorem:</strong> In a right triangle, the square of the hypotenuse is equal to the sum of the squares of the legs.
+                        c² = a² + b². This theorem is fundamental to Euclidean geometry and has many applications.
                     </div>
                 </div>
             </div>
             <div class="theorem-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Euclid.jpg/220px-Euclid.jpg" alt="Евклид" class="theorem-portrait">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Euclid.jpg/220px-Euclid.jpg" alt="Euclid" class="theorem-portrait">
                 <div class="theorem-content">
-                    <div class="theorem-name">Евклид</div>
-                    <div class="theorem-dates">ок. 325 - ок. 265 до н.э.</div>
+                    <div class="theorem-name">Euclid</div>
+                    <div class="theorem-dates">c. 325 - c. 265 BC</div>
                     <div class="theorem-text">
-                        <strong>Аксиоматика Евклида:</strong> Создал стройную систему геометрии, основанную на аксиомах. Его труд "Начала" стал основой для преподавания математики на протяжении более 2000 лет.
+                        <strong>Euclid's Axioms:</strong> Created a coherent system of geometry based on axioms. His work "Elements" became the foundation for teaching mathematics for over 2000 years.
                     </div>
                 </div>
             </div>
             <div class="theorem-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Nikola_Tesla.jpg/220px-Nikola_Tesla.jpg" alt="Ферма" class="theorem-portrait">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Nikola_Tesla.jpg/220px-Nikola_Tesla.jpg" alt="Fermat" class="theorem-portrait">
                 <div class="theorem-content">
-                    <div class="theorem-name">Пьер де Ферма</div>
+                    <div class="theorem-name">Pierre de Fermat</div>
                     <div class="theorem-dates">1601-1665</div>
                     <div class="theorem-text">
-                        <strong>Великая теорема Ферма:</strong> Уравнение xⁿ + yⁿ = zⁿ не имеет решений в натуральных числах при n > 2. Доказана Эндрю Уайлсом только в 1994 году.
+                        <strong>Fermat's Last Theorem:</strong> The equation xⁿ + yⁿ = zⁿ has no solutions in natural numbers for n > 2. Proved by Andrew Wiles only in 1994.
                     </div>
                 </div>
             </div>
             <div class="theorem-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Carl_Friedrich_Gauss.jpg/220px-Carl_Friedrich_Gauss.jpg" alt="Гаусс" class="theorem-portrait">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Carl_Friedrich_Gauss.jpg/220px-Carl_Friedrich_Gauss.jpg" alt="Gauss" class="theorem-portrait">
                 <div class="theorem-content">
-                    <div class="theorem-name">Карл Фридрих Гаусс</div>
+                    <div class="theorem-name">Carl Friedrich Gauss</div>
                     <div class="theorem-dates">1777-1855</div>
                     <div class="theorem-text">
-                        <strong>Основная теорема алгебры:</strong> Любое алгебраическое уравнение степени n с комплексными коэффициентами имеет ровно n комплексных корней (с учетом кратности). Гаусс дал первое строгое доказательство этой теоремы.
+                        <strong>Fundamental Theorem of Algebra:</strong> Every algebraic equation of degree n with complex coefficients has exactly n complex roots (counting multiplicities). Gauss gave the first rigorous proof of this theorem.
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Модальное окно статистики -->
+    <!-- Statistics modal window -->
     <div id="stats-modal" class="modal stats-modal">
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('stats-modal').style.display='none'">&times;</span>
-            <h2>Статистика прохождения</h2>
+            <h2>Progress Statistics</h2>
             <table id="stats-table">
                 <thead>
                     <tr>
-                        <th>Дата</th>
-                        <th>Операция</th>
-                        <th>Уровень</th>
-                        <th>Результат</th>
-                        <th>Время</th>
+                        <th>Date</th>
+                        <th>Operation</th>
+                        <th>Level</th>
+                        <th>Result</th>
+                        <th>Time</th>
                     </tr>
                 </thead>
                 <tbody id="stats-body">
-                    <!-- Сюда будет вставляться статистика -->
+                    <!-- Statistics will be inserted here -->
                 </tbody>
             </table>
             <div class="export-import">
-                <button id="export-stats">Экспорт в JSON</button>
-                <button id="import-stats">Импорт из JSON</button>
+                <button id="export-stats">Export to JSON</button>
+                <button id="import-stats">Import from JSON</button>
                 <input type="file" id="file-input" accept=".json" style="display: none;">
-                <button id="clear-stats">Очистить статистику</button>
+                <button id="clear-stats">Clear Statistics</button>
             </div>
         </div>
     </div>
     
-    <!-- Модальное окно достижений -->
+    <!-- Achievements modal window -->
     <div id="achievements-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('achievements-modal').style.display='none'">&times;</span>
-            <h2>Достижения</h2>
+            <h2>Achievements</h2>
             <div id="achievements-list">
-                <!-- Сюда будут добавляться достижения -->
+                <!-- Achievements will be added here -->
             </div>
         </div>
     </div>
 
-    <!-- Модальное окно прохождения -->
+    <!-- Progression modal window -->
     <div id="progression-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('progression-modal').style.display='none'">&times;</span>
-            <h2>Прохождение</h2>
+            <h2>Progression</h2>
             <div id="progression-stages">
-                <!-- Сюда будут добавляться этапы прохождения -->
+                <!-- Progression stages will be added here -->
             </div>
         </div>
     </div>
     
     <script>
-        // Флаг для отслеживания согласия пользователя
+        // Flag to track user consent
         let userConsent = localStorage.getItem('mathTrainerConsent') === 'true';
-        let saveData = userConsent; // Флаг для определения, нужно ли сохранять данные
+        let saveData = userConsent; // Flag to determine whether to save data
         
-        // Показать или скрыть главное окно в зависимости от согласия
+        // Show or hide main window based on consent
         if (userConsent) {
             document.getElementById('consent-modal').style.display = 'none';
             document.getElementById('main-container').style.display = 'block';
         }
         
-        // Обработчики для кнопок согласия
+        // Handlers for consent buttons
         document.getElementById('agree-btn').addEventListener('click', function() {
             localStorage.setItem('mathTrainerConsent', 'true');
             userConsent = true;
@@ -777,7 +780,7 @@
             initApp();
         });
         
-        // Остальные переменные и функции
+        // Other variables and functions
         let currentOperation = '+';
         let currentDifficulty = 'easy';
         let num1, num2, correctAnswer;
@@ -790,47 +793,47 @@
         let stats = [];
         let achievements = {};
         
-        // Инициализация данных из localStorage, если пользователь дал согласие
+        // Initialize data from localStorage if user gave consent
         if (userConsent) {
             stats = JSON.parse(localStorage.getItem('mathTrainerStats')) || [];
             achievements = JSON.parse(localStorage.getItem('mathTrainerAchievements')) || {};
         }
         
-        // Добавленные переменные и функции
+        // Added variables and functions
         const achievementList = [
-            {id: 'first_correct', name: 'Первый успех', desc: 'Правильно решите первую задачу', icon: '🥇'},
-            {id: 'ten_correct', name: 'Десяточка', desc: 'Правильно решите 10 задач', icon: '⭐'},
-            {id: 'fast_solver', name: 'Быстрый решатель', desc: 'Решите задачу менее чем за 5 секунд', icon: '⚡'},
-            {id: 'perfect_score', name: 'Без ошибок', desc: 'Решите 5 задач подряд без ошибок', icon: '🎯'},
-            {id: 'master_addition', name: 'Мастер сложения', desc: 'Правильно решите 20 задач на сложение', icon: '➕'},
-            {id: 'division_expert', name: 'Эксперт по делению', desc: 'Правильно решите 15 задач на деление', icon: '➗'}
+            {id: 'first_correct', name: 'First Success', desc: 'Solve the first problem correctly', icon: '🥇'},
+            {id: 'ten_correct', name: 'Perfect Ten', desc: 'Solve 10 problems correctly', icon: '⭐'},
+            {id: 'fast_solver', name: 'Fast Solver', desc: 'Solve a problem in less than 5 seconds', icon: '⚡'},
+            {id: 'perfect_score', name: 'No Mistakes', desc: 'Solve 5 problems in a row without errors', icon: '🎯'},
+            {id: 'master_addition', name: 'Addition Master', desc: 'Solve 20 addition problems correctly', icon: '➕'},
+            {id: 'division_expert', name: 'Division Expert', desc: 'Solve 15 division problems correctly', icon: '➗'}
         ];
 
         const progressionStages = [
             {
                 id: 'beginner',
-                title: 'Новичок',
-                description: 'Начните свой путь в математике',
+                title: 'Beginner',
+                description: 'Start your math journey',
                 achievements: ['first_correct'],
                 icon: '🌱'
             },
             {
                 id: 'apprentice',
-                title: 'Ученик',
-                description: 'Решите 10 задач правильно',
+                title: 'Apprentice',
+                description: 'Solve 10 problems correctly',
                 achievements: ['ten_correct', 'fast_solver'],
                 icon: '📚'
             },
             {
                 id: 'adept',
-                title: 'Знаток',
-                description: 'Освойте все основные операции',
+                title: 'Adept',
+                description: 'Master all basic operations',
                 achievements: ['perfect_score', 'master_addition', 'division_expert'],
                 icon: '🎓'
             }
         ];
         
-        // Элементы DOM
+        // DOM elements
         const problemElement = document.getElementById('problem');
         const answerElement = document.getElementById('answer');
         const resultElement = document.getElementById('result');
@@ -851,19 +854,19 @@
         const fileInput = document.getElementById('file-input');
         const statsBody = document.getElementById('stats-body');
         
-        // Добавленные элементы DOM
+        // Added DOM elements
         const achievementsBtn = document.getElementById('achievements-btn');
         const progressionBtn = document.getElementById('progression-btn');
         
-        // Функция инициализации приложения
+        // App initialization function
         function initApp() {
-            // Генерация новой задачи
+            // Generate new problem
             function generateProblem() {
                 answerElement.value = '';
                 resultElement.textContent = '';
                 resultElement.className = 'result';
                 clearInterval(timer);
-                // Устанавливаем время в зависимости от сложности
+                // Set time based on difficulty
                 switch(currentDifficulty) {
                     case 'easy': 
                         timeLeft = 45;
@@ -880,7 +883,7 @@
                 }
                 timeElement.textContent = timeLeft;
                 startTimer();
-                // Генерация чисел в зависимости от сложности
+                // Generate numbers based on difficulty
                 let maxNum, minNum;
                 switch(currentDifficulty) {
                     case 'easy':
@@ -922,14 +925,14 @@
                 answerElement.focus();
             }
             
-            // Таймер
+            // Timer
             function startTimer() {
                 timer = setInterval(() => {
                     timeLeft--;
                     timeElement.textContent = timeLeft;
                     if(timeLeft <= 0) {
                         clearInterval(timer);
-                        resultElement.textContent = '⏱ Время вышло!';
+                        resultElement.textContent = '⏱ Time is up!';
                         resultElement.className = 'result incorrect';
                         saveStat(currentOperation, currentDifficulty, false, initialTime);
                         incorrectCount++;
@@ -939,13 +942,13 @@
                 }, 1000);
             }
             
-            // Проверка ответа
+            // Check answer
             function checkAnswer() {
                 clearInterval(timer);
                 const timeSpent = initialTime - timeLeft;
                 const userAnswer = parseInt(answerElement.value);
                 if (isNaN(userAnswer)) {
-                    resultElement.textContent = 'Введите число!';
+                    resultElement.textContent = 'Enter a number!';
                     resultElement.className = 'result incorrect';
                     return;
                 }
@@ -953,17 +956,17 @@
                 const wasCorrect = (userAnswer === correctAnswer);
                 
                 if (wasCorrect) {
-                    resultElement.textContent = '✅ Правильно!';
+                    resultElement.textContent = '✅ Correct!';
                     resultElement.className = 'result correct';
                     correctCount++;
                     saveStat(currentOperation, currentDifficulty, true, timeSpent);
                     
-                    // Проверка специфических достижений
+                    // Check specific achievements
                     if (timeSpent < 5 && !achievements['fast_solver']) {
                         unlockAchievement('fast_solver');
                     }
                 } else {
-                    resultElement.textContent = `❌ Неправильно! Правильный ответ: ${correctAnswer}`;
+                    resultElement.textContent = `❌ Incorrect! Correct answer: ${correctAnswer}`;
                     resultElement.className = 'result incorrect';
                     incorrectCount++;
                     saveStat(currentOperation, currentDifficulty, false, timeSpent);
@@ -971,298 +974,26 @@
                 
                 totalCount++;
                 updateStats();
-                checkAchievements(); // Проверяем достижения после каждого ответа
+                checkAchievements(); // Check achievements after each answer
             }
             
-            // Сохранение статистики
+            // Save statistics
             function saveStat(operation, difficulty, isCorrect, timeSpent) {
-                if (!saveData) return; // Не сохраняем, если пользователь не дал согласие
+                if (!saveData) return; // Don't save if user didn't give consent
                 
                 const operationNames = {
-                    '+': 'Сложение',
-                    '-': 'Вычитание',
-                    '*': 'Умножение',
-                    '/': 'Деление'
+                    '+': 'Addition',
+                    '-': 'Subtraction',
+                    '*': 'Multiplication',
+                    '/': 'Division'
                 };
                 const difficultyNames = {
-                    'easy': 'Легкий',
-                    'medium': 'Средний',
-                    'hard': 'Сложный'
+                    'easy': 'Easy',
+                    'medium': 'Medium',
+                    'hard': 'Hard'
                 };
                 const statEntry = {
                     date: new Date().toLocaleString(),
                     operation: operationNames[operation],
                     difficulty: difficultyNames[difficulty],
-                    result: isCorrect ? 'Правильно' : 'Неправильно',
-                    time: timeSpent + ' сек'
-                };
-                stats.push(statEntry);
-                if (userConsent) {
-                    localStorage.setItem('mathTrainerStats', JSON.stringify(stats));
-                }
-            }
-            
-            // Показать статистику
-            function showStats() {
-                statsBody.innerHTML = '';
-                stats.forEach(stat => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${stat.date}</td>
-                        <td>${stat.operation}</td>
-                        <td>${stat.difficulty}</td>
-                        <td>${stat.result}</td>
-                        <td>${stat.time}</td>
-                    `;
-                    statsBody.appendChild(row);
-                });
-                document.getElementById('stats-modal').style.display = 'block';
-            }
-            
-            // Экспорт статистики
-            function exportStats() {
-                if (!saveData) {
-                    alert('Экспорт недоступен, так как вы не дали согласие на сохранение данных.');
-                    return;
-                }
-                const dataStr = JSON.stringify(stats, null, 2);
-                const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
-                const exportFileDefaultName = 'math-trainer-stats.json';
-                const linkElement = document.createElement('a');
-                linkElement.setAttribute('href', dataUri);
-                linkElement.setAttribute('download', exportFileDefaultName);
-                linkElement.click();
-            }
-            
-            // Импорт статистики
-            function importStats() {
-                if (!saveData) {
-                    alert('Импорт недоступен, так как вы не дали согласие на сохранение данных.');
-                    return;
-                }
-                fileInput.click();
-            }
-            
-            // Очистка статистики
-            function clearStats() {
-                if (!saveData) {
-                    alert('Очистка недоступна, так как вы не дали согласие на сохранение данных.');
-                    return;
-                }
-                if (confirm('Вы уверены, что хотите очистить всю статистику?')) {
-                    stats = [];
-                    if (userConsent) {
-                        localStorage.removeItem('mathTrainerStats');
-                    }
-                    showStats();
-                }
-            }
-            
-            // Обновление статистики
-            function updateStats() {
-                correctElement.textContent = correctCount;
-                incorrectElement.textContent = incorrectCount;
-                totalElement.textContent = totalCount;
-            }
-            
-            // Функция для проверки и разблокировки достижений
-            function checkAchievements() {
-                if (!saveData) return; // Не проверяем достижения, если не сохраняем данные
-                
-                // Проверка достижений
-                if (!achievements['first_correct'] && correctCount >= 1) {
-                    unlockAchievement('first_correct');
-                }
-                if (!achievements['ten_correct'] && correctCount >= 10) {
-                    unlockAchievement('ten_correct');
-                }
-                if (!achievements['master_addition'] && getOperationStats('+') >= 20) {
-                    unlockAchievement('master_addition');
-                }
-                if (!achievements['division_expert'] && getOperationStats('/') >= 15) {
-                    unlockAchievement('division_expert');
-                }
-                // Проверка на серию правильных ответов
-                if (!achievements['perfect_score']) {
-                    // Для простоты примера, проверим только текущую сессию
-                    // В реальном приложении лучше хранить счетчик последовательных правильных ответов
-                }
-            }
-
-            // Вспомогательная функция для подсчета решенных задач по операции
-            function getOperationStats(operation) {
-                return stats.filter(s => 
-                    s.operation === getOperationName(operation) && 
-                    s.result === 'Правильно'
-                ).length;
-            }
-
-            function getOperationName(op) {
-                const names = {
-                    '+': 'Сложение',
-                    '-': 'Вычитание',
-                    '*': 'Умножение',
-                    '/': 'Деление'
-                };
-                return names[op] || op;
-            }
-
-            // Функция для разблокировки достижения
-            function unlockAchievement(id) {
-                if (!saveData) return; // Не разблокируем достижения, если не сохраняем данные
-                
-                if (!achievements[id]) {
-                    achievements[id] = new Date().toLocaleString();
-                    if (userConsent) {
-                        localStorage.setItem('mathTrainerAchievements', JSON.stringify(achievements));
-                    }
-                    // Здесь можно добавить визуальное уведомление о новом достижении
-                    console.log(`Достижение разблокировано: ${id}`);
-                }
-            }
-
-            // Функция для отображения достижений
-            function showAchievements() {
-                if (!saveData) {
-                    alert('Достижения недоступны, так как вы не дали согласие на сохранение данных.');
-                    return;
-                }
-                const list = document.getElementById('achievements-list');
-                list.innerHTML = '';
-                
-                achievementList.forEach(ach => {
-                    const isUnlocked = achievements[ach.id];
-                    const card = document.createElement('div');
-                    card.className = `achievement-card ${isUnlocked ? 'unlocked' : ''}`;
-                    card.innerHTML = `
-                        <div class="achievement-icon">${ach.icon}</div>
-                        <div class="achievement-info">
-                            <div class="achievement-name">${ach.name}</div>
-                            <div class="achievement-desc">${ach.desc}</div>
-                            ${isUnlocked ? `<div class="achievement-date">Разблокировано: ${achievements[ach.id]}</div>` : ''}
-                        </div>
-                    `;
-                    list.appendChild(card);
-                });
-                
-                document.getElementById('achievements-modal').style.display = 'block';
-            }
-
-            // Функция для отображения прохождения
-            function showProgression() {
-                if (!saveData) {
-                    alert('Прохождение недоступно, так как вы не дали согласие на сохранение данных.');
-                    return;
-                }
-                const stagesContainer = document.getElementById('progression-stages');
-                stagesContainer.innerHTML = '';
-                
-                progressionStages.forEach(stage => {
-                    const isCompleted = stage.achievements.every(id => achievements[id]);
-                    const stageElement = document.createElement('div');
-                    stageElement.className = `progression-stage ${isCompleted ? 'completed' : ''}`;
-                    
-                    let achievementsHtml = '';
-                    stage.achievements.forEach(achId => {
-                        const ach = achievementList.find(a => a.id === achId);
-                        const isUnlocked = achievements[achId];
-                        achievementsHtml += `
-                            <div class="stage-achievement ${isUnlocked ? 'unlocked' : ''}">
-                                ${ach.icon} ${ach.name}
-                            </div>
-                        `;
-                    });
-                    
-                    stageElement.innerHTML = `
-                        <div class="stage-title">
-                            <span class="stage-icon">${stage.icon}</span>
-                            <span>${stage.title}</span>
-                            ${isCompleted ? '<span style="margin-left: auto; color: #4caf50;">✓ Завершено</span>' : ''}
-                        </div>
-                        <div>${stage.description}</div>
-                        <div class="stage-achievements">
-                            <strong>Достижения этапа:</strong>
-                            ${achievementsHtml}
-                        </div>
-                    `;
-                    
-                    stagesContainer.appendChild(stageElement);
-                });
-                
-                document.getElementById('progression-modal').style.display = 'block';
-            }
-            
-            // Обработчики событий
-            checkButton.addEventListener('click', checkAnswer);
-            nextButton.addEventListener('click', generateProblem);
-            answerElement.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    checkAnswer();
-                }
-            });
-            operationButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    operationButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    currentOperation = this.dataset.operation;
-                    generateProblem();
-                });
-            });
-            difficultyButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    difficultyButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    currentDifficulty = this.dataset.difficulty;
-                    generateProblem();
-                });
-            });
-            theoryBtn.addEventListener('click', function() {
-                document.getElementById('theory-modal').style.display = 'block';
-            });
-            theoremsBtn.addEventListener('click', function() {
-                document.getElementById('theorems-modal').style.display = 'block';
-            });
-            statsBtn.addEventListener('click', showStats);
-            exportStatsBtn.addEventListener('click', exportStats);
-            importStatsBtn.addEventListener('click', importStats);
-            clearStatsBtn.addEventListener('click', clearStats);
-            fileInput.addEventListener('change', function(e) {
-                if (!saveData) return;
-                
-                const file = e.target.files[0];
-                if (!file) return;
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    try {
-                        const importedStats = JSON.parse(e.target.result);
-                        stats = importedStats;
-                        if (userConsent) {
-                            localStorage.setItem('mathTrainerStats', JSON.stringify(stats));
-                        }
-                        showStats();
-                        alert('Статистика успешно импортирована!');
-                    } catch (error) {
-                        alert('Ошибка при импорте файла: неверный формат');
-                    }
-                };
-                reader.readAsText(file);
-            });
-            
-            // Добавленные обработчики событий
-            achievementsBtn.addEventListener('click', showAchievements);
-            progressionBtn.addEventListener('click', showProgression);
-            
-            // Закрытие модальных окон при клике вне их
-            window.addEventListener('click', function(event) {
-                if (event.target.classList.contains('modal')) {
-                    event.target.style.display = 'none';
-                }
-            });
-            
-            // Инициализация
-            generateProblem();
-            updateStats();
-        }
-    </script>
-</body>
-</html>
+                    result: isCorrect ? 'Correct' :
